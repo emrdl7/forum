@@ -1,7 +1,7 @@
 // src/App.jsx
 
 import { useState } from "react";
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./pages/about";
 import Kiahs from "./pages/kiahs";
@@ -9,12 +9,18 @@ import Program from "./pages/program";
 import Jeju from "./pages/jeju";
 import Header from "./components/Header";
 import NavMenu from "./components/NavMenu";
+import SubMenu from "./components/SubMenu";
 import Footer from "./components/Footer";
 
-// 2. 공통 레이아웃 컴포넌트 (헤더, 푸터 등 모든 페이지에 나타날 요소)
+import BoardList from "./pages/boardList";
+import BoardGallery from "./pages/boardGallery";
+import BoardView from "./pages/boardView";
+import BoardWrite from "./pages/boardWrite";
+
 const Layout = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -34,6 +40,9 @@ const Layout = () => {
     { to: "/jeju", strong: "제주관광", span: "Visit Jeju" },
   ];
 
+  // 메인(홈) 화면이 아닐 때만 서브메뉴 노출
+  const isNotMain = location.pathname !== "/";
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-sans">
       <Header
@@ -49,6 +58,9 @@ const Layout = () => {
         isMobileMenuOpen={isMobileMenuOpen}
         toggleMobileMenu={toggleMobileMenu}
       />
+
+      {/* 메인(홈) 제외 모든 화면에 서브메뉴 노출 */}
+      {isNotMain && <SubMenu />}
 
       <main className="">
         <Outlet />
@@ -68,6 +80,11 @@ function App() {
         <Route path="kiahs" element={<Kiahs />} />
         <Route path="program" element={<Program />} />
         <Route path="jeju" element={<Jeju />} />
+
+        <Route path="boardList" element={<BoardList />} />
+        <Route path="boardGallery" element={<BoardGallery />} />
+        <Route path="boardView" element={<BoardView />} />
+        <Route path="boardWrite" element={<BoardWrite />} />
       </Route>
     </Routes>
   );

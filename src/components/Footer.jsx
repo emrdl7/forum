@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="py-[30px] border-t border-solid border-[#ccc] text-[#555] md:py-[50px]">
+  <footer className="py-[30px] mt-[40px] border-t border-solid border-[#ccc] text-[#555] md:py-[50px] md:mt-[80px]">
     <div className="container relative text-center md:text-left">
       <strong className="block text-[16px] md:text-[20px] text-[600] mb-[10px]">
         제9회 <span className="block md:inline">동아시아농어업유산협의회</span>{" "}
