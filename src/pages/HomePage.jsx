@@ -1,11 +1,43 @@
 // src/pages/HomePage.jsx
 
 import { Routes, Route, Link, Outlet } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 
 function HomePage() {
+  const images = [
+    "/src/assets/images/main1.jpg",
+    "/src/assets/images/main2.jpg",
+    "/src/assets/images/main3.jpg",
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    timerRef.current = setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 6000); // 6초마다 전환 (천천히)
+    return () => clearTimeout(timerRef.current);
+  }, [currentIndex, images.length]);
+
   return (
     <div className="">
-      <div className="bg-[url('assets/images/main1.jpg')] bg-cover bg-no-repeat bg-center h-[26dvh] md:h-[670px]"></div>
+      {/* 크로스페이드 슬라이드 영역 */}
+      <div className="relative overflow-hidden h-[26dvh] md:h-[670px]">
+        {images.map((img, idx) => (
+          <img
+            key={img}
+            src={img}
+            alt=""
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out`}
+            style={{
+              minHeight: "200px",
+              opacity: currentIndex === idx ? 1 : 0,
+              zIndex: currentIndex === idx ? 2 : 1,
+              pointerEvents: "none",
+            }}
+          />
+        ))}
+      </div>
 
       <div className="links relative bg-[#79A7C9] py-[30px] mb-[30px] md:pt-[54px] md:pb-[178px] md:mb-[230px]">
         <div className="mb-[30px] text-center text-white px-[15px] break-keep">
@@ -23,7 +55,7 @@ function HomePage() {
           </h3>
 
           <p className="block font-[600] text-[14px] md:text-[28px]">
-            2025.09.17.(Wed) ~ 19.(Fri) 제주 오리엔탈호텔
+            2025.09.17.(Wed) ~ 20.(Sat) 제주 오리엔탈호텔
           </p>
         </div>
         <div className="container flex flex-wrap justify-center gap-2 md:absolute md:bottom-[-120px] md:left-[50%] md:translate-x-[-50%] md:gap-6">
