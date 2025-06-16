@@ -121,56 +121,64 @@ function HomePage() {
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 break-keep">
             <div className="flex-[1_1_40%] mb-[20px] md:flex-[1_1_22%]">
-              <p className=" w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
-                <img
-                  src="/src/assets/images/main1.jpg"
-                  className="object-cover w-[100%] h-[100%]"
-                  alt=""
-                />
-              </p>
-              <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
-                제9회 동아시아농어업유산협의회 국제 컨퍼런스
-              </strong>
-              <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              <Link to="/boardGallery/1">
+                <p className="w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
+                  <img
+                    src="/src/assets/images/main1.jpg"
+                    className="object-cover w-[100%] h-[100%]"
+                    alt=""
+                  />
+                </p>
+                <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
+                  제9회 동아시아농어업유산협의회 국제 컨퍼런스
+                </strong>
+                <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              </Link>
             </div>
             <div className="flex-[1_1_40%] mb-[20px] md:flex-[1_1_22%]">
-              <p className=" w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
-                <img
-                  src="/src/assets/images/main1.jpg"
-                  className="object-cover w-[100%] h-[100%]"
-                  alt=""
-                />
-              </p>
-              <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
-                제9회 동아시아농어업유산협의회 국제 컨퍼런스
-              </strong>
-              <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              <Link to="/boardGallery/2">
+                <p className="w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
+                  <img
+                    src="/src/assets/images/main1.jpg"
+                    className="object-cover w-[100%] h-[100%]"
+                    alt=""
+                  />
+                </p>
+                <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
+                  제9회 동아시아농어업유산협의회 국제 컨퍼런스
+                </strong>
+                <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              </Link>
             </div>
             <div className="flex-[1_1_40%] mb-[20px] md:flex-[1_1_22%]">
-              <p className=" w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
-                <img
-                  src="/src/assets/images/main1.jpg"
-                  className="object-cover w-[100%] h-[100%]"
-                  alt=""
-                />
-              </p>
-              <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
-                제9회 동아시아농어업유산협의회 국제 컨퍼런스
-              </strong>
-              <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              <Link to="/boardGallery/3">
+                <p className="w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
+                  <img
+                    src="/src/assets/images/main1.jpg"
+                    className="object-cover w-[100%] h-[100%]"
+                    alt=""
+                  />
+                </p>
+                <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
+                  제9회 동아시아농어업유산협의회 국제 컨퍼런스
+                </strong>
+                <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              </Link>
             </div>
             <div className="flex-[1_1_40%] mb-[20px] md:flex-[1_1_22%]">
-              <p className=" w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
-                <img
-                  src="/src/assets/images/main1.jpg"
-                  className="object-cover w-[100%] h-[100%]"
-                  alt=""
-                />
-              </p>
-              <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
-                제9회 동아시아농어업유산협의회 국제 컨퍼런스
-              </strong>
-              <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              <Link to="/boardGallery/4">
+                <p className="w-[100%] h-[140px] mb-[16px] md:h-[240px] md:mb-[26px]">
+                  <img
+                    src="/src/assets/images/main1.jpg"
+                    className="object-cover w-[100%] h-[100%]"
+                    alt=""
+                  />
+                </p>
+                <strong className="block text-[14px] font-[500] mb-[4px] md:text-[20px]">
+                  제9회 동아시아농어업유산협의회 국제 컨퍼런스
+                </strong>
+                <span className="text-[12px] md:text-[16px]">2024-08-21</span>
+              </Link>
             </div>
           </div>
         </div>
