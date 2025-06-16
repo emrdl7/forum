@@ -4,8 +4,10 @@ import { Routes, Route, Link, Outlet } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div className="p-8 bg-white rounded-xl shadow-lg text-center">
-      제주관광
+    <div className="container">
+      <div className="text-center my-[100px] text-[50px] font-black text-[#aaa]">
+        준비중입니다
+      </div>
     </div>
   );
 }

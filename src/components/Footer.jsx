@@ -9,10 +9,10 @@ const Footer = () => (
       </strong>
 
       <div className="center mb-[20px] text-[14px] md:absolute md:right-[15px] md:top-0 md:text-[16px] md:font-[600]">
-        <Link to="#" className="block md:inline-block">
+        <Link to="/privacy" className="block md:inline-block">
           개인정보처리방침
         </Link>
-        <Link to="#" className="block md:inline-block md:ml-[20px]">
+        <Link to="/nomail" className="block md:inline-block md:ml-[20px]">
           이메일무단수집거부
         </Link>
       </div>

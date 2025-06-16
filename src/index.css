@@ -68,3 +68,6 @@
 .drop-shadow-main {
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
 }
+.drop-shadow-poster {
+  box-shadow: 0 8px 34px rgba(0, 0, 0, 0.25);
+}
