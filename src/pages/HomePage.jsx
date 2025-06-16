@@ -23,6 +23,9 @@ function HomePage() {
     <div className="md:before:block md:before:w-[1170px] md:before:h-[1px] md:before:bg-[#fff] md:before:opacity-50 md:before:absolute md:before:top-[150px] md:before:z-[400] md:before:left-[50%] md:before:translate-x-[-50%]">
       {/* 크로스페이드 슬라이드 영역 */}
       <div className="relative overflow-hidden h-[56dvw]">
+        <strong className="absolute z-[200] text-white font-[900] text-[60px] left-[40px] top-[100px] opacity-[60%] md:text-[200px] md:left-[50%] md:top-[50%] md:translate-y-[-50%] md:translate-x-[-540px]">
+          ERAHS
+        </strong>
         {images.map((img, idx) => (
           <img
             key={img}
