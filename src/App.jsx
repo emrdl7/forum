@@ -44,7 +44,10 @@ const Layout = () => {
   const isNotMain = location.pathname !== "/";
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 font-sans">
+    <div
+      className={`min-h-screen flex flex-col bg-gray-50 font-sans ${
+        location.pathname === "/" ? "" : " pt-[60px] md:pt-[150px]"
+      }`}>
       <Header
         isLangMenuOpen={isLangMenuOpen}
         toggleLangMenu={toggleLangMenu}
@@ -62,7 +65,7 @@ const Layout = () => {
       {/* 메인(홈) 제외 모든 화면에 서브메뉴 노출 */}
       {isNotMain && <SubMenu />}
 
-      <main className="">
+      <main>
         <Outlet />
       </main>
 

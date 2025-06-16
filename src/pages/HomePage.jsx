@@ -5,9 +5,9 @@ import { useState, useEffect, useRef } from "react";
 
 function HomePage() {
   const images = [
+    "/src/assets/images/main0.jpg",
     "/src/assets/images/main1.jpg",
     "/src/assets/images/main2.jpg",
-    "/src/assets/images/main3.jpg",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const timerRef = useRef(null);
@@ -20,9 +20,9 @@ function HomePage() {
   }, [currentIndex, images.length]);
 
   return (
-    <div className="">
+    <div className="md:before:block md:before:w-[1170px] md:before:h-[1px] md:before:bg-[#fff] md:before:opacity-50 md:before:absolute md:before:top-[150px] md:before:z-[400] md:before:left-[50%] md:before:translate-x-[-50%]">
       {/* 크로스페이드 슬라이드 영역 */}
-      <div className="relative overflow-hidden h-[26dvh] md:h-[670px]">
+      <div className="relative overflow-hidden h-[56dvw]">
         {images.map((img, idx) => (
           <img
             key={img}
@@ -39,7 +39,7 @@ function HomePage() {
         ))}
       </div>
 
-      <div className="links relative bg-[#79A7C9] py-[30px] mb-[30px] md:pt-[54px] md:pb-[178px] md:mb-[230px]">
+      <div className="links relative bg-[#ED6830] py-[30px] mb-[30px] md:pt-[54px] md:pb-[178px] md:mb-[230px]">
         <div className="mb-[30px] text-center text-white px-[15px] break-keep">
           <h3 className="mb-[20px]">
             <small className="block font-medium text-[14px] md:text-[28px]">
@@ -110,9 +110,9 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="my-[30px] md:my-[126px_126px] bg-[#777] py-[30px] md:py-[100px] text-white">
+      <div className="my-[30px] md:my-[126px_80px] bg-[#5A5655] py-[30px] md:py-[100px] text-white">
         <div className="container">
-          <h3 className="text-center font-[600] mb-[20px] text-[18px] md:text-[42px] md:mb-[70px]">
+          <h3 className="font-[600] mb-[20px] text-[18px] md:text-[42px] md:mb-[70px]">
             GALLERY
           </h3>
 
@@ -173,60 +173,66 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="my-[50px] md:my-[0_130px]">
+      <div className="my-[50px_0]">
         <div className="container">
-          <h3 className="text-center font-[600] mb-[20px] text-[18px] md:text-[36px] md:mb-[60px] md:text-left">
-            주최/주관
-          </h3>
+          <div className="flex flex-col md:flex-row items-center gap-10">
+            <h3 className="text-center font-[600] text-[18px] md:w-[150px]  md:text-[28px] md:text-left whitespace-nowrap">
+              주최/주관
+            </h3>
 
-          <div className="md:flex md:justify-start md:items-center">
-            <Link
-              to=""
-              className="block mx-[auto] mb-[20px] w-[234px] h-[34px] text-[0px] bg-[url('assets/images/link1.svg')] bg-no-repeat bg-center bg-[length:100%_auto] md:m-0 md:mr-[104px]"
-              target="_blank">
-              제주특별자치도
-            </Link>
-            <Link
-              to=""
-              className="block mx-[auto] my-[40px_20px]  text-[16px] text-center font-[500]  md:m-0 md:mr-[104px]"
-              target="_blank">
-              한국 동아시아농어업유산협의회
-            </Link>
-            <Link
-              to=""
-              className="block mx-[auto] mb-[20px] w-[208px] h-[54px] text-[0px] bg-[url('assets/images/link3.svg')] bg-no-repeat bg-center bg-[length:auto_100%]  md:m-0 md:mr-[104px]"
-              target="_blank">
-              한국농어촌유산학회
-            </Link>
-            <Link
-              to=""
-              className="block mx-[auto] mb-[20px] w-[160px] h-[47px] text-[0px] bg-[url('assets/images/link4.svg')] bg-no-repeat bg-center bg-[length:auto_100%]  md:m-0"
-              target="_blank">
-              제주관광공사
-            </Link>
+            <div className="flex flex-col md:flex-row items-center gap-10">
+              <Link
+                to=""
+                className="block w-[234px] h-[34px] text-[0px] bg-[url('/src/assets/images/link1.svg')] bg-no-repeat bg-center bg-[length:100%_auto]"
+                target="_blank">
+                제주특별자치도
+              </Link>
+              <Link
+                to=""
+                className="text-[16px] text-center font-[500]"
+                target="_blank">
+                한국 동아시아농어업유산협의회
+              </Link>
+              <Link
+                to=""
+                className="block w-[208px] h-[54px] text-[0px] bg-[url('/src/assets/images/link3.svg')] bg-no-repeat bg-center bg-[length:auto_100%]"
+                target="_blank">
+                한국농어촌유산학회
+              </Link>
+              <Link
+                to=""
+                className="block w-[160px] h-[47px] text-[0px] bg-[url('/src/assets/images/link4.svg')] bg-no-repeat bg-center bg-[length:auto_100%]"
+                target="_blank">
+                제주관광공사
+              </Link>
+            </div>
           </div>
-          <h3 className="text-center font-[600] mt-[40px] mb-[20px] text-[18px] md:mt-[120px] md:text-[36px] md:mb-[60px] md:text-left">
-            후원
-          </h3>
-          <div className="md:flex md:justify-start md:items-center">
-            <Link
-              to=""
-              className="block mx-[auto] mb-[20px] w-[214px] h-[51px] text-[0px] bg-[url('assets/images/link5.svg')] bg-no-repeat bg-center bg-[length:100% auto]  md:m-0 md:mr-[104px]"
-              target="_blank">
-              농림축산식품부
-            </Link>
-            <Link
-              to=""
-              className="block mx-[auto] mb-[20px] w-[170px] h-[50px] text-[0px] bg-[url('assets/images/link6.svg')] bg-no-repeat bg-center bg-[length:100% auto]  md:m-0 md:mr-[104px]"
-              target="_blank">
-              해양수산부
-            </Link>
-            <Link
-              to=""
-              className="block mx-[auto] mb-[20px] w-[289px] h-[34px] text-[0px] bg-[url('assets/images/link7.svg')] bg-no-repeat bg-center bg-[length:100% auto]  md:m-0"
-              target="_blank">
-              한국농어촌공사
-            </Link>
+
+          {/* 후원 섹션도 동일한 패턴으로 수정 */}
+          <div className="flex flex-col md:flex-row items-center gap-10 mt-[40px] md:mt-[80px]">
+            <h3 className="text-center font-[600] text-[18px] md:w-[150px] md:text-[28px] md:text-left whitespace-nowrap">
+              후원
+            </h3>
+            <div className="flex flex-col md:flex-row items-center gap-10">
+              <Link
+                to=""
+                className="block mx-[auto] mb-[20px] w-[214px] h-[51px] text-[0px] bg-[url('/src/assets/images/link5.svg')] bg-no-repeat bg-center bg-[length:100% auto]  md:m-0"
+                target="_blank">
+                농림축산식품부
+              </Link>
+              <Link
+                to=""
+                className="block mx-[auto] mb-[20px] w-[170px] h-[50px] text-[0px] bg-[url('/src/assets/images/link6.svg')] bg-no-repeat bg-center bg-[length:100% auto]  md:m-0"
+                target="_blank">
+                해양수산부
+              </Link>
+              <Link
+                to=""
+                className="block mx-[auto] mb-[20px] w-[289px] h-[34px] text-[0px] bg-[url('/src/assets/images/link7.svg')] bg-no-repeat bg-center bg-[length:100% auto]  md:m-0"
+                target="_blank">
+                한국농어촌공사
+              </Link>
+            </div>
           </div>
         </div>
       </div>

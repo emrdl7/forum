@@ -7,9 +7,9 @@ const Header = ({
   isMobileMenuOpen,
   toggleMobileMenu,
 }) => (
-  <header className=" bg-white shadow-md">
+  <header className="absolute z-[900] left-0 right-0 top-0">
     <div className="container relative mx-auto flex items-center justify-between h-[60px] md:h-[150px] z-[600]">
-      <h1 className="bg-[url('assets/images/logo.png')] bg-contain bg-no-repeat bg-center w-[70px] h-[70px] absolute left-[15px] top-[10px] md:w-[160px] md:h-[160px] md:top-[26px]">
+      <h1 className="bg-[url('assets/images/logo.svg')] bg-contain bg-no-repeat bg-center w-[70px] h-[70px] absolute left-[15px] top-[10px] md:w-[160px] md:h-[160px] md:top-[26px]">
         <Link to="/" className="block w-[100%] h-[100%] text-[0px]">
           ERAHS
         </Link>
