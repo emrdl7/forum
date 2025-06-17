@@ -68,7 +68,7 @@ const Layout = () => {
       ],
     },
     {
-      to: "/giahs",
+      to: "/kiahs",
       strong: "한국의 농어업유산",
       span: "KIAHS of Korea",
       subLinks: [
@@ -123,9 +123,9 @@ const Layout = () => {
     } else {
       // parentLink를 찾지 못한 경우, 특정 경로에 대한 제목을 지정합니다.
       if (location.pathname === "/privacy") {
-        subMenuTitle = "Privacy Policy";
+        subMenuTitle = "개인정보처리방침";
       } else if (location.pathname === "/nomail") {
-        subMenuTitle = "No Email Collection";
+        subMenuTitle = "이메일무단수집거부";
       }
       // 그 외의 경우 subMenuTitle은 ""로 유지되어 SubMenu 컴포넌트의 기본값을 사용합니다.
     }

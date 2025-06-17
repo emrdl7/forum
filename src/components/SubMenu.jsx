@@ -18,7 +18,7 @@ const SubMenu = ({ title, subLinks }) => {
   const hasSubLinks = subLinks && subLinks.length > 0;
 
   return (
-    <div>
+    <div className="mb-[40px] md:mb-[64px]">
       <h3
         className={`bg-[#79A7C9] text-center py-[15px] font-[600] text-white text-[18px] md:h-[160px] md:text-[40px] ${
           hasSubLinks ? "md:pt-[36px]" : "md:pt-[52px]"
@@ -27,7 +27,7 @@ const SubMenu = ({ title, subLinks }) => {
       </h3>
       {/* subLinks가 있을 때만 목록을 렌더링합니다. */}
       {hasSubLinks && (
-        <ul className="container flex overflow-x-auto whitespace-nowrap bg-white shadow-md !mb-[40px] md:!px-0 md:w-[1180px] md:shadow-xl md:relative md:top-[-46px] md:!mb-[64px]">
+        <ul className="container flex overflow-x-auto whitespace-nowrap bg-white shadow-md  md:!px-0 md:w-[1180px] md:shadow-xl md:relative md:top-[-46px]">
           {subLinks.map((link, index) => {
             const isActive = location.pathname === link.to;
             return (

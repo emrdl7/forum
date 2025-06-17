@@ -5,7 +5,7 @@ import { Routes, Route, Link, Outlet } from "react-router-dom";
 function HomePage() {
   return (
     <div className="container">
-      <h3 className="font-black text-center text-[24px] mb-[30px] md:text-[42px] md:mb-[80px]">
+      <h3 className="font-semibold text-center text-[24px] mb-[30px] md:text-[42px] md:mb-[80px]">
         행사소개
       </h3>
 
@@ -49,7 +49,7 @@ function HomePage() {
         </dl>
       </div>
 
-      <h3 className="font-black text-center text-[24px] mb-[30px] md:text-[42px] md:mb-[80px]">
+      <h3 className=" text-[24px] font-semibold mb-[30px] md:text-[32px] md:mb-[40px]">
         인사말
       </h3>
 
