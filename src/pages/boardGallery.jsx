@@ -7,22 +7,29 @@ function BoardGallery() {
         갤러리
       </h3>
 
+
+      <div className="flex gap-2 mb-8 border-b border-[#E5E5E5] pb-[30px]">
+        <button className="px-4 py-2 bg-[#222] text-white rounded">전체</button>
+        <button className="px-4 py-2 bg-[#e4e4e4] text-[#555] hover:bg-[#F8F8F8] rounded">행사 사진</button>
+        <button className="px-4 py-2 bg-[#e4e4e4] text-[#555] hover:bg-[#F8F8F8] rounded">공지사항</button>
+        <button className="px-4 py-2 bg-[#e4e4e4] text-[#555] hover:bg-[#F8F8F8] rounded">일반</button>
+      </div>
       <div className="flex justify-between items-center mb-4">
         <form className="flex gap-2">
           <input
             type="text"
             placeholder="검색어를 입력하세요"
-            className="border border-[#ccc] text-[14px] px-[10px] h-[38px] rounded"
+            className="border border-[#ccc]  px-[10px] h-[38px] rounded"
           />
           <button
             type="submit"
-            className="bg-[#555] text-white text-[14px] h-[38px] px-[10px] rounded">
+            className="bg-[#555] text-white h-[38px] px-[10px] rounded">
             검색
           </button>
         </form>
         <Link
           to="/boardGallery/write"
-          className="bg-[#ef8156] text-white text-[14px] leading-[38px] px-[14px] rounded">
+          className="bg-[#ef8156] text-white leading-[38px] px-[14px] rounded">
           글쓰기
         </Link>
       </div>
@@ -172,7 +179,7 @@ function BoardGallery() {
       <div className="flex justify-center mt-[30px] gap-2">
         <a
           href="#"
-          className="px-3 py-[5px] border border-[#ccc] text-[#555] text-[14px] rounded bg-gray-100 hover:bg-gray-200">
+          className="px-3 py-[5px] border border-[#ccc] text-[#555] rounded bg-gray-100 hover:bg-gray-200">
           이전
         </a>
         <a
@@ -182,12 +189,12 @@ function BoardGallery() {
         </a>
         <a
           href="#"
-          className="px-3 py-[5px] border border-[#ccc] text-[#555] text-[14px] rounded bg-gray-100 hover:bg-gray-200">
+          className="px-3 py-[5px] border border-[#ccc] text-[#555] rounded bg-gray-100 hover:bg-gray-200">
           2
         </a>
         <a
           href="#"
-          className="px-3 py-[5px] border border-[#ccc] text-[#555] text-[14px] rounded bg-gray-100 hover:bg-gray-200">
+          className="px-3 py-[5px] border border-[#ccc] text-[#555] rounded bg-gray-100 hover:bg-gray-200">
           다음
         </a>
       </div>
