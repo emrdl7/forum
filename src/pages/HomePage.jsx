@@ -107,7 +107,7 @@ function HomePage() {
             한국의 세계 중요농업유산
           </h3>
 
-          <div className="bg-[url('assets/images/main-map.svg')] bg-no-repeat bg-center bg-[length:320px_auto] pt-[190px] text-[0px]  md:bg-[length:880px_auto] md:pt-[512px]">
+          <div className="bg-[url('assets/images/map01.svg')] bg-[] bg-no-repeat bg-center bg-[length:320px_auto] pt-[270px] text-[0px]  md:bg-[length:1014px_auto] md:pt-[840px]">
             지도
           </div>
         </div>

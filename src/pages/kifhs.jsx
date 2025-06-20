@@ -204,31 +204,88 @@ function HomePage() {
         <h4 className="relative pl-4 text-[18px] font-semibold mb-[15px] before:absolute before:left-0 before:top-[50%] before:h-[22px] before:w-2 before:-translate-y-1/2 before:bg-[#ED6830] md:text-[24px] md:mb-[20px]">
           지정기준
         </h4>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {[
-            "역사성과 지속성을 가진 농업활동",
-            "농산물의 생산 및 지역 주민의 생계유지에 이용",
-            "고유의 농업기술 또는 기법 보유",
-            "농업활동과 연계된 전통농업문화의 보유",
-            "농업활동과 관련된 특별한 경관의 형성",
-            "생물다양성의 보존 및 증진에 기여",
-          ].map((criterion, index) =>
-            (() => {
-              const midPoint = Math.ceil(criterion.length / 2);
-              const firstHalf = criterion.substring(0, midPoint);
-              const secondHalf = criterion.substring(midPoint);
-              return (
-                <div
-                  key={index}
-                  className="p-4 border border-gray-200 rounded-lg shadow bg-white flex items-center justify-center text-center h-full min-h-[100px] md:min-h-[120px]">
-                  <div>
-                    <span>{firstHalf}</span>
-                    <span className="block">{secondHalf}</span>
-                  </div>
-                </div>
-              );
-            })()
-          )}
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse border border-gray-300 text-sm md:text-base min-w-[760px]">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 p-2 text-center">구분</th>
+                <th className="border border-gray-300 p-2 text-center">항목</th>
+                <th className="border border-gray-300 p-2 text-left">내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 p-2 font-medium text-center" rowSpan="5">유산의 특징</td>
+                <td className="border border-gray-300 p-2 text-center">수산물 생산</td>
+                <td className="border border-gray-300 p-2">
+                  • 수산물을 생산하거나 주민 생계수단으로서 역할<br />
+                  • 생산물의 국민 식량수단으로의 활용정도
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">생물 다양성</td>
+                <td className="border border-gray-300 p-2">
+                  • 생물다양성과 생태계 기능 보존·증진
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">지식체계</td>
+                <td className="border border-gray-300 p-2">
+                  • 어업유산의 지식체계 및 기술 보유<br />
+                  • 어업유산의 보호‧보전을 위한 관리 기술
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">전통문화</td>
+                <td className="border border-gray-300 p-2">
+                  • 어업유산 관련 문화·의식 형성<br />
+                  • 세대를 잇는 어업유산 활용 기술의 전수
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">경관형성</td>
+                <td className="border border-gray-300 p-2">
+                  • 아름답거나 현저한 경관 형성<br />
+                  • 주변 어촌마을 및 자연환경과 어업유산의 조화
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-medium text-center" colSpan="2">역사성</td>
+                <td className="border border-gray-300 p-2">
+                  • 60년 이상 경과 또는 이에 준하는 역사성<br />
+                  • 미래의 존속 가능하고 존속할 만한 가치여부
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-medium text-center" rowSpan="4">지역성</td>
+                <td className="border border-gray-300 p-2 text-center">지자체 정책</td>
+                <td className="border border-gray-300 p-2">
+                  • 지방자치단체의 보전·관리계획(Action plan) 수립 등 정책적 지원<br />
+                  • 지방자치단체의 유지관리를 위한 조례 제정 등
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">인식도</td>
+                <td className="border border-gray-300 p-2">
+                  • 해당주민의 어업유산에 대한 인지도 등<br />
+                  • 어업유산에 대한 해당주민들의 자부심과 자긍심 등
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">지속가능성</td>
+                <td className="border border-gray-300 p-2">
+                  • 향후 어업활동 요소로의 활용가능성<br />
+                  • 어업 외 지역 활성화 요소로 활용 가능성
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 text-center">가치제고</td>
+                <td className="border border-gray-300 p-2">
+                  사후관리 및 보존관리계획 수립, 타당성여부
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -236,10 +293,11 @@ function HomePage() {
         국가중요농업유산의 지정 현황 (총19개소)
       </h3>
 
-      <div className="mb-8">
-        {/* 일러스트 또는 관련 이미지를 여기에 추가할 수 있습니다. */}
-        {/* 예: <img src="/src/assets/images/giahs-illustration.png" alt="GIAHS 일러스트" className="w-full rounded-lg shadow-md" /> */}
+
+      <div className="mb-8 bg-[url('assets/images/map03.svg')] bg-[] bg-no-repeat bg-center bg-[length:320px_auto] pt-[270px] text-[0px]  md:bg-[length:1014px_auto] md:pt-[840px]">
+            지도
       </div>
+
 
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {nationalHeritageData.map((item) => (

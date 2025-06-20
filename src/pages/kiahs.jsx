@@ -223,9 +223,9 @@ function HomePage() {
         한국의 GIAHS 지정 현황
       </h3>
 
-      <div className="mb-8">
-        {/* 일러스트 또는 관련 이미지를 여기에 추가할 수 있습니다. */}
-        {/* 예: <img src="/src/assets/images/kiahs-illustration.png" alt="KIAHS 일러스트" className="w-full rounded-lg shadow-md" /> */}
+
+      <div className="mb-8 bg-[url('assets/images/map01.svg')] bg-[] bg-no-repeat bg-center bg-[length:320px_auto] pt-[270px] text-[0px]  md:bg-[length:1014px_auto] md:pt-[840px]">
+            지도
       </div>
 
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
