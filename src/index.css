@@ -71,3 +71,7 @@
 .drop-shadow-poster {
   box-shadow: 0 8px 34px rgba(0, 0, 0, 0.25);
 }
+
+.drop-shadow-link {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
