@@ -6,6 +6,17 @@ export const useNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // 페이지 타입 구분
+  const getPageType = () => {
+    if (location.pathname === "/") return "home";
+    if (location.pathname.startsWith("/board")) return "board";
+    return "sub";
+  };
+
+  const pageType = getPageType();
+  const isHomePage = pageType === "home";
+  const isBoardPage = pageType === "board";
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     if (!isMobileMenuOpen) setIsLangMenuOpen(false);
@@ -103,5 +114,8 @@ export const useNavigation = () => {
     subMenuTitle,
     subMenuLinks,
     location,
+    pageType,
+    isHomePage,
+    isBoardPage,
   };
 };

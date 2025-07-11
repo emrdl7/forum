@@ -22,7 +22,7 @@ const Layout = () => {
   return (
     <div
       className={`min-h-screen flex flex-col bg-gray-50 font-sans ${
-        location.pathname === "/" ? "" : " pt-[60px] md:pt-[150px]"
+        location.pathname === "/" ? "" : " pt-[60px] md:pt-[150px] md:before:block md:before:fixed md:before:top-0 md:before:z-[400] md:before:left-0 md:before:w-[100%] md:before:h-[150px] md:before:bg-[#fff] md:before:shadow-2xs"
       }`}>
       <Header
         isLangMenuOpen={isLangMenuOpen}
